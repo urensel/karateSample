@@ -26,18 +26,18 @@ public class TestRunner {
 //        return Karate.run("github").relativeTo(getClass());
 //    }
 //
-//    @Karate.Test
-//    Karate testAll() {
-//        return Karate.run("classpath:features").relativeTo(getClass());
-//
-//    }
+    @Karate.Test
+    Karate testAll() {
+        return Karate.run("classpath:features").relativeTo(getClass());
 
-
-    @Test
-    void testParallel() {
-        Results results = Runner.path("classpath:features").parallel(5);
-        assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
+
+
+//    @Test
+//    void testParallel() {
+//        Results results = Runner.path("classpath:features").parallel(5);
+//        assertEquals(0, results.getFailCount(), results.getErrorMessages());
+//    }
 
 //    @Test
 //    void testParallel() {
